@@ -2,24 +2,31 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tarea labo 4 PNC</title>
+  <link rel="stylesheet" href="src/main/resources/static/style.css"  th:href = "@{/style.css}" type="text/css">
+  <title>Seguridad</title>
 </head>
 
 <body>
 	
 	<form th:action="@{/seguridad}" th:object="${robot}" method="post">
 	
+		<div>
 		<label>Marcar solo si usted es un robot: </label>
 		<input type="radio"  th:field="*{soyRobot}" th:value = "${false}"><br>
 		<span th:errors = "*{soyRobot}" style = "color: #E81505;"></span>
+		</div>
+		
 		<br><br>
 		
 		<input type="submit" value="Aceptar">
 		
+		<br><br>
+		
+		<a href = "/producto">Regresar</a>
+		
 	</form>
 	
-	<a href = "/producto">Regresar</a>
+
 	
 </body>
 </html>

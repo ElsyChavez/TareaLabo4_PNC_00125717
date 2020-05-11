@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="src/main/resources/static/style.css"  th:href = "@{/style.css}" type="text/css">
   <title>Tarea labo 4 PNC</title>
 </head>
 
@@ -10,31 +10,48 @@
 
 	<h1>Ingresar producto</h1>
 	
+	<div class = "container">
+	
 	<form th:action="@{/formProducto}" th:object="${producto}" method="post">
 	
-		<label>Nombre del producto: </label>
-		<input type="text"  th:field="*{nombre}"><br>
-		<span th:errors = "*{nombre}" style = "color: #E81505;"></span>
+		<div>
+			<label>Nombre del producto: </label>
+			<input type="text"  th:field="*{nombre}"><br>
+			<span th:errors = "*{nombre}" style = "color: #E81505;"></span>
+		</div>
+		
 		<br><br>
 		
-		<label>Descripcion del producto: </label>
-		<input type="text" th:field="*{descripcion}"><br>
-		<span th:errors = "*{descripcion}" style = "color: #E81505;"></span>
+		<div>
+			<label>Descripcion del producto: </label>
+			<input type="text" th:field="*{descripcion}"><br>
+			<span th:errors = "*{descripcion}" style = "color: #E81505;"></span>
+		</div>
+		
 		<br><br>
 		
-		<label>Precio del producto: </label>
-		<input type="number" th:field="*{precio}"><br>
-		<span th:errors = "*{precio}" style = "color: #E81505;"></span>
+		<div>
+			<label>Precio del producto: </label>
+			<input type="number" th:field="*{precio}"><br>
+			<span th:errors = "*{precio}" style = "color: #E81505;"></span>
+		</div>
+		
 		<br><br>
 		
-		<label>Fecha de vencimiento del producto: </label>
-		<input type="text" th:field="*{vencimiento}"><br>
-		<span th:errors = "*{vencimiento}" style = "color: #E81505;"></span>
+		<div>
+			<label>Fecha de vencimiento del producto: </label>
+			<input type="text" th:field="*{vencimiento}"><br>
+			<span th:errors = "*{vencimiento}" style = "color: #E81505;"></span>
+		</div>
+		
 		<br><br>
 		
-		<input type="submit" value="Agregar producto">
+		<input type="submit" value="Agregar producto" class = "boton1">
 		
 	</form>
+	
+	</div>
+	
 	
 </body>
 </html>
