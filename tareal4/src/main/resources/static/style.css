@@ -29,11 +29,14 @@ body {
  
  input[type="text"]{
 	background-color: #eaeaee;
+	padding:8px; 
+    border:2px solid transparent; 
+    border-radius: 5px;
  }
  
   input[type="submit"]{
 	background-color: #4b4b5a;
-	border-radius: 8px;
+	border-radius: 5px;
 	color: white;
 	width: 50%;
 	border:0 none;
